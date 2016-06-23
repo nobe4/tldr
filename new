@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# new
+#
+#   utility to create a new tldr file
+#   auto-create the corresponding folder
+#
+# usage:
+#   ./new
+
+# Get current day folder
+folder=$(date +"%Y/%m/%d")
+
+# Create new folder
+mkdir -p "$folder"
+
+# Create new file
+printf "File name: "
+read filename
+
+echo "---
+
+title: 
+link: 
+tags: 
+
+---" >> "$folder/$filename.md"
+
+# Edit new file
+vi "$folder/$filename.md"
