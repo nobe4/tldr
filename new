@@ -27,4 +27,4 @@ tags:
 ---" >> "$folder/$filename.md"
 
 # Edit new file
-vi "$folder/$filename.md"
+vi "$folder/$filename.md" +normal!\ jjA +startinsert!
